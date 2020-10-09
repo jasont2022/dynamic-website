@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-filename-extension */
+import React from 'react'
+
 const App = () => (
   <h1>Your react app!</h1>
 )
