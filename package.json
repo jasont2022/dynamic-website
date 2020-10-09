@@ -1,0 +1,26 @@
+{
+  "name": "dynamic-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasont2022/dynamic-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasont2022/dynamic-website/issues"
+  },
+  "homepage": "https://github.com/jasont2022/dynamic-website#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
