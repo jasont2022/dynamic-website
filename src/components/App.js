@@ -1,7 +1,19 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react'
+import s from 'styled-components'
+import Intro from './Intro'
+import BlogPosts from './BlogPosts'
+
+const Container = s.div`
+  width: 80%;
+  margin: auto;
+`
 
 const App = () => (
-  <h1>Your react app!</h1>
+  <Container>
+    <Intro />
+    <BlogPosts />
+  </Container>
 )
+
 export default App
