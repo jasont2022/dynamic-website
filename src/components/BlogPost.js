@@ -3,9 +3,9 @@ import React from 'react'
 import s from 'styled-components'
 
 /*
-const BlogPost = ({ title, imgURL, description }) => (
+const BlogPost = ({ title, id, imgURL, description }) => (
   <div>
-    <h2>{title}</h2>
+    <h2>Post #{id}{title}</h2>
     <img src={imgURL} alt=" " />
     <p>{description}</p>
     <button type="button">Edit</button>

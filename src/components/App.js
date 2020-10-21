@@ -6,7 +6,7 @@ import BlogPosts from './BlogPosts'
 
 const Container = s.div`
   width: 80%;
-  margin: auto;
+  margin: 20px auto;
 `
 
 const App = () => (

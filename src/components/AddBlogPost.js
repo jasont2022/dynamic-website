@@ -1,15 +1,20 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react'
 import s from 'styled-components'
+import { Button } from 'react-bootstrap'
 
 const AddBlogPost = () => (
   <div>
     <input type="text" placeholder="enter title" />
     <input type="text" placeholder="enter image url" />
     <input type="text" placeholder="enter description" />
-    <button type="button">Save</button>
-    <button type="button">Cancel</button>
+    <Button type="button">Save</Button>
+    <Button type="button">Cancel</Button>
   </div>
 )
+
+// dont forget about id
+
+// dispatch only
 
 export default AddBlogPost
