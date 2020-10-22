@@ -32,7 +32,7 @@ const AddIntro = ({
         variant="success"
         onClick={() => {
           modifyIntro(img, desc)
-          setIsEdit
+          setIsEdit()
         }}
       >
         Save

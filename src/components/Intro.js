@@ -34,6 +34,8 @@ const Intro = ({
   return (
     <IntroWrapper>
       <h1>Hey this is me!</h1>
+      {console.log(image)}
+      {console.log(description)}
       <img src={image} alt="" />
       <p>
         {' '}
