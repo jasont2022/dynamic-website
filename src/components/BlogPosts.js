@@ -3,6 +3,7 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react'
 import s from 'styled-components'
+import { Button } from 'react-bootstrap'
 import BlogPost from './BlogPost'
 import AddBlogPost from './AddBlogPost'
 
@@ -19,8 +20,9 @@ const BlogPosts = ({ posts }) => (
 const BlogPosts = () => (
   <div>
     <h1>Blog Posts</h1>
-    <button type="button">Add Post</button>
+    <Button variant="primary">Add Post</Button>
   </div>
 )
 
+// dispatch & state
 export default BlogPosts
