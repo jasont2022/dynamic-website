@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
-import editIntro from './editIntro'
+import intro from './intro'
+import posts from './posts'
 
 export default combineReducers({
-  editIntro,
+  intro,
+  posts,
 })

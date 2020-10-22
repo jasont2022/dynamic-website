@@ -3,7 +3,7 @@ const defaultState = {
   description: '',
 }
 
-const editIntro = (state = defaultState, action) => {
+const intro = (state = defaultState, action) => {
   const { type, image, description } = action
   switch (type) {
     case 'EDIT_INTRO':

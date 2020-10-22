@@ -15,7 +15,8 @@ const BlogPost = ({ title, id, imgURL, description }) => (
 
 const BlogPost = () => (
   <div>
-    <h2>Hello</h2>
+    <h2>Post #</h2>
+    <button type="button">Edit</button>
   </div>
 )
 

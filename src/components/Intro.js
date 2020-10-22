@@ -13,16 +13,13 @@ const IntroWrapper = s.div`
 const Intro = () => {
   const [isEdit, setIsEdit] = useState(false)
 
-  const handleEditChange = () => {
-    setIsEdit(!isEdit)
-    console.log(isEdit)
-  }
+  const handleEditChange = () => setIsEdit(!isEdit)
 
   if (isEdit) {
     return (
       <IntroWrapper>
         <h1>Hey this is me!</h1>
-        <AddIntro onEditChange={handleEditChange} />
+        <AddIntro onEditChange={() => handleEditChange()} />
       </IntroWrapper>
     )
   }

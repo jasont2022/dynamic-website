@@ -8,7 +8,7 @@ const FormWrapper = s.div`
 
 `
 
-const AddIntro = ({ handleEditChange }) => {
+const AddIntro = ({ onEditChange }) => {
   const input = ''
 
   return (
@@ -19,7 +19,7 @@ const AddIntro = ({ handleEditChange }) => {
       <Button
         variant="secondary"
         style={{ marginLeft: '1rem' }}
-        onClick={() => handleEditChange()}
+        onClick={onEditChange}
       >
         Cancel
       </Button>
