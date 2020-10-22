@@ -19,7 +19,7 @@ const AddIntro = ({ handleEditChange }) => {
       <Button
         variant="secondary"
         style={{ marginLeft: '1rem' }}
-        onClick={handleEditChange}
+        onClick={() => handleEditChange()}
       >
         Cancel
       </Button>
