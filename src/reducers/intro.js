@@ -12,3 +12,5 @@ const intro = (state = defaultState, action) => {
       return state
   }
 }
+
+export default intro

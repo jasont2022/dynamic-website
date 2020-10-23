@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/jsx-filename-extension */
-import React from 'react'
+import React, { useState } from 'react'
 import s from 'styled-components'
 import { Button } from 'react-bootstrap'
 import BlogPost from './BlogPost'
@@ -17,12 +17,25 @@ const BlogPosts = ({ posts }) => (
 )
 */
 
-const BlogPosts = () => (
-  <div>
-    <h1>Blog Posts</h1>
-    <Button variant="primary">Add Post</Button>
-  </div>
-)
+const BlogPosts = () => {
+  const [modalShow, setModalShow] = useState(false)
+
+  return (
+    <div>
+      <h1>Blog Posts</h1>
+      <Button
+        variant="primary"
+        onClick={() => setModalShow(true)}
+      >
+        Add Post
+      </Button>
+      <AddBlogPost
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
+    </div>
+  )
+}
 
 // dispatch & state
 export default BlogPosts
