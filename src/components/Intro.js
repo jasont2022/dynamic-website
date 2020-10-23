@@ -14,7 +14,7 @@ const IntroWrapper = s.div`
 `
 
 const Intro = ({
-  image, description, dispatchEditIntro, intro,
+  image, description, dispatchEditIntro,
 }) => {
   const [isEdit, setIsEdit] = useState(false)
 
@@ -34,8 +34,6 @@ const Intro = ({
   return (
     <IntroWrapper>
       <h1>Hey this is me!</h1>
-      {console.log(image)}
-      {console.log(description)}
       <img src={image} alt="" />
       <p>
         {' '}
