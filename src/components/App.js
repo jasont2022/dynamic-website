@@ -6,6 +6,7 @@ import BlogPosts from './BlogPosts'
 
 const Container = s.div`
   width: 80%;
+  box-sizing: border-box;
   margin: 20px auto;
 `
 

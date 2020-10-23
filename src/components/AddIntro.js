@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-filename-extension */
 import React, { useState } from 'react'
-import s from 'styled-components'
 import { Button, Form } from 'react-bootstrap'
 
 const AddIntro = ({

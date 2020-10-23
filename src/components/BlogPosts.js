@@ -10,6 +10,23 @@ import { addPost, editPost, deletePost } from '../actions'
 import BlogPost from './BlogPost'
 import AddBlogPost from './AddBlogPost'
 
+const Title = s.h1`
+  font-size: 48px;
+  font-weight: 800;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(to right, #00B4DB, #0083B0 40%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`
+
+const PostsWrapper = s.div`
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  grid-auto-rows: minmax(300px, auto);
+`
+
 const BlogPosts = ({
   posts, dispatchAddPost, dispatchEditPost, dispatchDeletePost,
 }) => {
@@ -17,16 +34,19 @@ const BlogPosts = ({
 
   return (
     <div>
-      <h1>Blog Posts</h1>
-      {posts.map(post => (
-        <BlogPost {...post}
-          key={post.id}
-          editPost={dispatchEditPost}
-          deletePost={dispatchDeletePost}
-        />
-      ))}
+      <Title>Blog Posts</Title>
+      <PostsWrapper>
+        {posts.map(post => (
+          <BlogPost {...post}
+            key={post.id}
+            editPost={dispatchEditPost}
+            deletePost={dispatchDeletePost}
+          />
+        ))}
+      </PostsWrapper>
       <Button
         variant="primary"
+        style={{ marginTop: '0.5rem' }}
         onClick={() => setModalShow(true)}
       >
         Add Post
