@@ -1,5 +1,5 @@
 /* eslint-disable no-plusplus */
-let nextPostId = 0
+let nextPostId = 1
 
 // introduction actions
 export const editIntro = (image, description) => ({

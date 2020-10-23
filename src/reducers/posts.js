@@ -11,7 +11,9 @@ const posts = (state = [], action) => {
         },
       ]
     case 'EDIT_POST':
-      return state.map(post => ((post.id === id) ? { title, image, description } : post))
+      return state.map(post => ((post.id === id) ? {
+        title, id, image, description,
+      } : post))
     case 'DELETE_POST':
       return state.filter(post => post.id !== id)
     default:

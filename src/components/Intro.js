@@ -13,15 +13,13 @@ const IntroWrapper = s.div`
   padding: 5px;
 `
 
-const Intro = ({
-  image, description, dispatchEditIntro,
-}) => {
+const Intro = ({ image, description, dispatchEditIntro }) => {
   const [isEdit, setIsEdit] = useState(false)
 
   if (isEdit) {
     return (
       <IntroWrapper>
-        <h1>Hey this is me!</h1>
+        <h1>Hey this is Jason!</h1>
         <AddIntro
           setIsEdit={() => setIsEdit(false)}
           image={image}
@@ -33,22 +31,16 @@ const Intro = ({
   }
   return (
     <IntroWrapper>
-      <h1>Hey this is me!</h1>
+      <h1>Hey this is Jason!</h1>
       <img src={image} alt="" />
-      <p>
-        {' '}
-        {description}
-        {' '}
-      </p>
+      <p>{description}</p>
       <Button variant="warning" onClick={() => setIsEdit(true)}>Edit</Button>
     </IntroWrapper>
   )
 }
 
-// state
 const mapStateToProps = ({ intro }) => intro
 
-// dispatch
 const mapDispatchToProps = dispatch => ({
   dispatchEditIntro: (image, description) => dispatch(editIntro(image, description)),
 })
