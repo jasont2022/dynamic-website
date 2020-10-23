@@ -3,14 +3,29 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react'
 import s from 'styled-components'
-import { Button } from 'react-bootstrap'
+import { Button, Image } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { editIntro } from '../actions'
 import AddIntro from './AddIntro'
 
 const IntroWrapper = s.div`
-  margin: 5px;
-  padding: 5px;
+  margin: 10px 0px 40px 0px;
+`
+const Title = s.h1`
+  font-size: 48px;
+  font-weight: 800;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(to right, #de6262, #ff9671, #ffb88c 37%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`
+
+const Img = s(Image)`
+  width: 300px;
+  hieght: 300px;
+  border-radius: 5%;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 `
 
 const Intro = ({ image, description, dispatchEditIntro }) => {
@@ -19,7 +34,7 @@ const Intro = ({ image, description, dispatchEditIntro }) => {
   if (isEdit) {
     return (
       <IntroWrapper>
-        <h1>Hey this is Jason!</h1>
+        <Title>Hey this is Jason!</Title>
         <AddIntro
           setIsEdit={() => setIsEdit(false)}
           image={image}
@@ -31,8 +46,8 @@ const Intro = ({ image, description, dispatchEditIntro }) => {
   }
   return (
     <IntroWrapper>
-      <h1>Hey this is Jason!</h1>
-      <img src={image} alt="" />
+      <Title>Hey this is Jason!</Title>
+      <Img src={image} rounded />
       <p>{description}</p>
       <Button variant="warning" onClick={() => setIsEdit(true)}>Edit</Button>
     </IntroWrapper>
